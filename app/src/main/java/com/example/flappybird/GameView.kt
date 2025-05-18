@@ -67,7 +67,7 @@ class GameView @JvmOverloads constructor(
         if (pipes.isEmpty() || pipes.last().right < width - 300) {
             val gap = 300f
             val pipeWidth = 200f
-            val topHeight = (100..(height - gap - 100)).random().toFloat()
+            val topHeight = (100..(height - gap.toInt() - 100)).random().toFloat()
             pipes.add(RectF(width.toFloat(), 0f, width + pipeWidth, topHeight))
             pipes.add(RectF(width.toFloat(), topHeight + gap, width + pipeWidth, height.toFloat()))
         }
