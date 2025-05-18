@@ -8,8 +8,12 @@ import android.graphics.RectF
 import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import android.util.AttributeSet
 
-class GameView(context: Context) : SurfaceView(context), SurfaceHolder.Callback {
+class GameView @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null
+) : SurfaceView(context, attrs), SurfaceHolder.Callback {
 
     private val thread: GameThread
     private val bird = RectF(100f, 100f, 150f, 150f)
